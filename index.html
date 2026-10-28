@@ -1,19 +1,34 @@
-let secretNumber = 7;
-let attempts = 0;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let guess = Number(prompt("Guess a number: "))
+        // while(guess !== 7){
+         //    console.log("Wrong guess, try again");
+          //   guess = Number(prompt("Guess again: "))
+        // }
+        // console.log("Correct guess.")     
+        // HOME WORK CLASSES 
+         let guess = Number(prompt("guess a number"));
+         let attempts = 1
 
-let guess = Number(prompt("Guess a number:"));
-attempts++;
+         while (guess !==7){
+             if(guess > 7){
+                 console.log("Too high")
+             }else{
+                 console.log("Too low")
+             }
+             attempts++
+             guess = Number(prompt("guess again"));
 
-while (guess !== secretNumber) {
-    if (guess > secretNumber) {
-        console.log("Too high! Try again.");
-    } else {
-        console.log("Too low! Try again.");
-    }
-
-    guess = Number(prompt("Guess again:"));
-    attempts++;
-}
-
-console.log("Congratulations! Correct number.");
-console.log("You tried " + attempts + " times.");
+         }
+        console.log("correct guess!");
+         console.log(`you have made ${attempts} attempts.`);
+    </script>
+</body>
+</html>
